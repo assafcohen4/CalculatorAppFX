@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cohen.assaf.calculatorappfx.CalcController">
+    <children>
+        <Label fx:id="calculationWindow" prefHeight="50.0" prefWidth="609.0" text="">
+            <font>
+                <Font size="34.0" />
+            </font>
+        </Label>
+        <GridPane fx:id="grid" prefHeight="352.0" prefWidth="400.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="button0" mnemonicParsing="false" onAction="#click_number" prefHeight="131.0" prefWidth="128.0" text="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                <Button fx:id="button1" mnemonicParsing="false" onAction="#click_number" prefHeight="127.0" prefWidth="134.0" text="2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                <Button fx:id="button2" mnemonicParsing="false" onAction="#click_number" prefHeight="116.0" prefWidth="137.0" text="3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                <Button fx:id="buttonPlus" mnemonicParsing="false" onAction="#click_arithm" prefHeight="162.0" prefWidth="136.0" text="+" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                <Button fx:id="button4" mnemonicParsing="false" onAction="#click_number" prefHeight="123.0" prefWidth="143.0" text="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <Button fx:id="button7" mnemonicParsing="false" onAction="#click_number" prefHeight="99.0" prefWidth="114.0" text="7" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <Button fx:id="button5" mnemonicParsing="false" onAction="#click_number" prefHeight="117.0" prefWidth="142.0" text="5" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <Button fx:id="button6" mnemonicParsing="false" onAction="#click_number" prefHeight="126.0" prefWidth="128.0" text="6" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <Button fx:id="buttonMinus" mnemonicParsing="false" onAction="#click_arithm" prefHeight="134.0" prefWidth="151.0" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <Button fx:id="button8" mnemonicParsing="false" onAction="#click_number" prefHeight="135.0" prefWidth="119.0" text="8" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <Button fx:id="button9" mnemonicParsing="false" onAction="#click_number" prefHeight="110.0" prefWidth="116.0" text="9" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <Button fx:id="buttonMult" mnemonicParsing="false" onAction="#click_arithm" prefHeight="108.0" prefWidth="115.0" text="*" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <Button fx:id="buttonZero" mnemonicParsing="false" onAction="#click_number" prefHeight="91.0" prefWidth="127.0" text="0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <Button fx:id="buttonEqual" mnemonicParsing="false" onAction="#click_equal" prefHeight="70.0" prefWidth="243.0" text="=" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                <Button fx:id="buttonNegate" mnemonicParsing="false" onAction="#click_negate_action" prefHeight="131.0" prefWidth="128.0" text="Negate" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <Button fx:id="buttonDiv" mnemonicParsing="false" onAction="#click_arithm" prefHeight="138.0" prefWidth="138.0" text="/" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <Button fx:id="buttonDel" mnemonicParsing="false" onAction="#click_arithm" prefHeight="138.0" prefWidth="138.0" text="Delete" GridPane.rowIndex="3" />
+                <Button fx:id="buttonClear" mnemonicParsing="false" onAction="#click_arithm" prefHeight="138.0" prefWidth="138.0" text="Clear" GridPane.rowIndex="4" />
+                <Button fx:id="buttonDecimal" mnemonicParsing="false" onAction="#click_decimal" prefHeight="110.0" prefWidth="138.0" text="Decimal" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            </children>
+        </GridPane>
+    </children>
+</VBox>
+
